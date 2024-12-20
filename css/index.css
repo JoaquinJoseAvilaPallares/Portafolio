@@ -1,0 +1,402 @@
+@import url("https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap");
+
+:root {
+    --color-1: #d34817;
+    --color-2: #4d160f;
+    --font-1: "Merienda", cursive;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    height: 100%;
+}
+body{
+    min-height: 100%; 
+    overflow: auto;
+    background: linear-gradient(315deg,#98c249 3%,#464444 38%,#4c9186 68%, #d8860b 98%);
+    animation: gradient 15s ease infinite;
+    background-size: 400% 400%;
+    background-attachment: fixed;   
+}
+@keyframes gradient {
+    0% {background-position: 0% 0%;}
+    50% {background-position: 100% 100%;}
+    100% {background-position: 0% 0%;}
+}
+.animation{
+    position: absolute;
+}
+.animation-body {
+    background: rgb(255 255 255 / 25%);
+    border-radius: 100% 100% 0 0;
+    position: fixed;
+    width: 200%;
+    height: 12em;
+    animation: animation-body 10s -3s linear infinite;
+    transform: translate3d(0, 0, 0);
+    opacity: 0.8;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+.animation-body:nth-of-type(2) {
+    bottom: -1.25em;
+    animation: animation-body 18s linear reverse infinite;
+    opacity: 0.8;
+}
+
+.animation-body:nth-of-type(3) {
+    bottom: -2.5em;
+    animation: animation-body 20s -1s reverse infinite;
+    opacity: 0.9;
+}
+@keyframes animation-body {
+    2% {transform: translateX(1);}
+    25% {transform: translateX(-25%);}
+    50% {transform: translateX(-50%);}
+    75% {transform: translateX(-25%);}
+    100% {transform: translateX(1);}
+}
+.grid-cont > *{
+    box-shadow: -1px 1px 7px 0px rgb(0, 0, 0, 0);
+    border-radius: 4px;
+    padding: 10px;
+    text-align: center;
+}
+.header{
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: rgba(0, 0, 0, 0.5);
+}
+.logo {
+    margin: 0px auto;
+    margin-left: 20px;
+}
+.logo-link img {
+    width: 40px;
+    height: 40px;
+}
+.icons {
+    display: flex;
+    justify-self: end;
+    margin-right: 20px;
+    gap: 15px;
+    color: black;
+    font-size: 20px;
+}
+.icons a {
+    color: white;
+}
+.nav-item a {
+    color: var(--color-1);
+    font-family: var(--font-1);
+}
+.nabar{
+    grid-area: nabar;
+    display: grid;
+}
+.nabar ul{
+    display: none;
+    position: fixed;
+    gap: 0px;
+    width: 110px;
+    margin-top: 30px;
+    margin-left: 20px;
+    text-align: justify;
+    background: #eeebeb;
+    border-radius: 10px;
+}
+.toggle-btn{
+    width: 35px;
+    position: absolute;
+    margin-left: 20px;
+    cursor: pointer;
+}
+.toggle-btn span{
+    display: grid;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    margin-bottom: 6px;
+   
+}
+.show ul{
+    display: grid;
+}
+.perfil-imagen{
+    grid-area: perfil-imagen;
+    display: grid;
+    place-items: center;
+}
+.perfil-img img{
+    width: 310px;
+    height: 300px;
+}
+.perfil-titulo{
+    grid-area: perfil-titulo;
+    display: grid;
+    place-items: center;
+}
+.title-perfil {
+    font: normal 28px/50px var(--font-1);
+    color: var(--color-2);
+}
+.title-perfil b {
+    float: left;
+    overflow: hidden;
+    position: relative;
+    height: 50px;
+    top: 6px;
+}
+/* Animation title perfil */
+.title-perfil .innerIam {
+    display: inline-block;
+    color: var(--color-1);
+    position: relative;
+    white-space: nowrap;
+    top: 0;
+    left: 0;
+
+    /*animation*/
+    -webkit-animation: move 1s;
+    -moz-animation: move 1s;
+    -ms-animation: move 1s;
+    -o-animation: move 1s;
+    animation: move 10s;
+    /*animation-iteration-count*/
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    -ms-animation-iteration-count: infinite;
+    -o-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    /*animation-delay*/
+    -webkit-animation-delay: 1s;
+    -moz-animation-delay: 1s;
+    -ms-animation-delay: 1s;
+    -o-animation-delay: 1s;
+    animation-delay: 1s;
+}
+@keyframes move {
+    0% {top: 0px;}
+    20% {top: -50px;}
+    40% {top: -100px;}
+    60% {top: -150px;}
+    80% {top: -200px;}
+}
+@-webkit-keyframes move {
+    0% {top: 0px;}
+    20% {top: -50px;}
+    40% {top: -100px;}
+    60% {top: -150px;}
+    80% {top: -200px;}
+}
+@-moz-keyframes move {
+    0% {top: 0px;}
+    20% {top: -50px;}
+    40% {top: -100px;}
+    60% {top: -150px;}
+    80% {top: -200px;}
+}
+@-o-keyframes move {
+    0% {top: 0px;}
+    20% {top: -50px;}
+    40% {top: -100px;}
+    60% {top: -150px;}
+    80% {top: -200px;}
+}
+@keyframes move {
+    80% {top: 0px;}
+    60% {top: -50px;}
+    40% {top: -100px;}
+    20% {top: -150px;}
+    0% {top: -200px;}
+}
+.main{
+    grid-area: main;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    font-family: var(--font-1);
+    color: var(--color-2);
+}
+.sobre-mi {
+    display: grid;
+    place-items: center;    
+}
+.titulo {
+    color: var(--color-1);    
+}
+.cont-parrafos{
+    text-align: justify;
+    text-size-adjust: 20px;
+}
+.parrafo a {
+    text-decoration: none;
+    color: var(--color-2);
+}
+.skills{
+    margin-bottom: 20px;
+    display: grid;
+    place-items: center;
+}
+.skills-conenedor {
+    display: grid;
+    background: rgba(245, 160, 160, 0.5);
+    border-radius: 10px;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0px;
+}
+.skills-sub-conenedor {
+    margin-top: 20px;
+    width: 70px;
+    height: 70px;
+    display: grid;
+    place-items: center;
+    grid-template-rows: 1fr 1fr;
+    border-radius: 10px;
+}
+.skills-sub-conenedor img {
+    width: 45px;
+    height: 45px;
+}
+.skills-sub-conenedor span {
+    display: none;
+    transition: all 0.5s;
+    color: var(--color-2);
+    font-family: var(--font-1);
+}
+.skills-sub-conenedor:hover>span {
+    display: block;
+    transition: all 0.5s;
+}
+.footer{
+    grid-area: footer;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+}
+.footer-derechos {
+    display: flex;
+    align-items: center;
+    font-size: 9px;
+}
+.footer-icons {
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    gap: 15px;
+    color: black;
+    font-size: 20px;
+}
+.footer-icons a {
+    color: white;
+}
+.footer-email {
+    display: flex;
+    justify-self: end;
+    align-items: center;
+}
+.footer-email-img{
+    width: 120px;
+}
+.grid-cont{
+    display: grid;
+    gap: 10px;
+    grid-template: 
+        "header"        50px
+        "nabar"         50px  
+        "perfil-imagen" 320px
+        "perfil-titulo" 200px
+        "main"          auto
+        "footer"        70px;
+}
+@media (min-width:750px){
+    .grid-cont{
+        grid-template: 
+        "header         header"         50px
+        "nabar          nabar"          170px
+        "perfil-imagen  perfil-titulo"  440px
+        "main           main"           auto
+        "footer         footer"         70px /
+        auto            auto;
+    }
+    .nabar{
+        grid-area: nabar;
+        place-items: center;
+    }
+    .nabar ul{
+        display: flex;
+        position: absolute;
+        gap: 20px;
+        width: 700px;
+        margin-top: 0px;
+        background: rgba(238, 235, 235, 0.4);
+    }
+    .toggle-btn{
+        display: none;
+    }  
+    .perfil-imagen{
+        justify-items: end;
+        margin-right: 50px;
+    }
+    .perfil-titulo{
+        justify-items: left;
+        margin-right: 50px;
+    }
+    .cont-parrafos{
+        width: 760px;
+    }
+    .skills-sub-conenedor{
+        width: 100px;
+        height: 100px;
+    }
+    .skills-sub-conenedor img{
+        width: 60px;
+        height: 60px;
+    }
+    .footer-derechos {
+        font-size: 15px;
+    }
+    .footer-icons{
+        font-size: 25px;
+    }
+    .footer-email-img{
+        width: 180px;
+    }
+
+}
+
+@media (min-width:1210px){
+    .grid-cont{
+        grid-template: 
+        "header         header"         50px
+        "nabar          nabar"          170px
+        "perfil-imagen  perfil-titulo"  440px
+        "main           main"           auto
+        "footer         footer"         70px /
+        auto            auto;
+    }
+    .main{
+        grid-template-columns: 1.5fr 1fr;
+    }
+    .cont-parrafos{
+        width: 660px;
+    }
+    .footer-derechos {
+        font-size: 20px;
+    }
+    .footer-icons{
+        font-size: 30px;
+    }
+    .footer-email-img{
+        width: 220px;
+    }
+}
+
+
+
